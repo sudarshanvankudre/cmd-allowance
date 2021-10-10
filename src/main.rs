@@ -1,11 +1,17 @@
-use clap::clap_app;
-extern crate clap;
+use std::io;
 
 fn main() {
-    let matches = clap_app!(myapp => 
-        (version: "1.0")
-        (author: "Sudarshan Vankudre")
-        (about: "Financial tracking through the command line")
-        (@subcommand )
-    )
+    loop {
+        match read_input() {
+            Ok(_) => (),
+            Err(_) => println!("error when reading command")
+        }
+    }
+}
+
+fn read_input() -> io::Result<()> {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input)?;
+    println!("You typed: {}", input.trim());
+    Ok(())
 }
