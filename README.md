@@ -14,5 +14,6 @@ Available commands:
 - `allowance` : Displays free money available to spend
 - `update <id> -subject <subject> -amount <amount>` : Update an existing transaction record
 
+Close with `control-C`
 
 
