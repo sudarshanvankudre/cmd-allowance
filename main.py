@@ -9,6 +9,7 @@ creation_sql = """CREATE TABLE IF NOT EXISTS transactions(
                                                         ts
                                                         );"""
 con.execute(creation_sql)
+con.commit()
 
 ALLOWED_CMDS = ["new", "list", "allowance", "update", "bulk"]
 
