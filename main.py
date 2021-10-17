@@ -23,7 +23,7 @@ def run_command(cmd):
         for row in con.execute("SELECT * FROM transactions"):
             print(row)
     elif cmd[0] == "allowance": 
-        print(con.execute("SELECT SUM(value) FROM transactions").fetchone()[2])
+        print(con.execute("SELECT SUM(value) FROM transactions").fetchone()[0])
     elif cmd[0] == "update":
         print("Update not implemented yet")
     elif cmd[0] == "bulk":
