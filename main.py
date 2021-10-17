@@ -27,6 +27,7 @@ def run_command(cmd):
         print("Update not implemented yet")
     elif cmd[0] == "bulk":
         print("Bulk insert not implemented yet")
+    con.commit()
 
         
 def main():
